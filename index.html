@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ベトナムの料理</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javaScript/index.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+    <!-- <script src="javaScript/jquery-3.2.1.min.js"></script> -->
+    <link rel="shortcut icon" href="logo.ico">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#"><img src="image/logo.png" alt="logo"></a>
+
+            <!-- tao slide banner -->
+            <div id="slider">
+                <img class="slide" src="image/banhmi.png" style="display: none;" overflow: hidden>
+                <img class="slide" src="image/banhcuon.jpg" style="display: none;" overflow: hidden>
+                <img class="slide" src="image/pho3_slide.jpg" style="display: none;" overflow: hidden>
+                <a href="#" id="next"><img src="image/next.png"></a>
+                <a href="#" id="prev"><img src="image/prev.png"></a>
+            </div>
+            <script>
+                var stt = 0;
+                slide();
+
+                function slide() {
+                    var i;
+                    var x = document.getElementsByClassName("slide");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    stt++;
+                    if (stt > x.length) { stt = 1 }
+                    x[stt - 1].style.display = "block";
+                    setTimeout(slide, 1000);
+                }
+
+            </script>
+        </header>
+        <nav id="sticked-menu">
+            <div class="menu">
+                <ul>
+                    <li id="current"><a href="index.html">ホームページ</a></li>
+                    <li><a href="northern.html">北部の料理</a></li>
+                    <li><a href="central.html">中央部の料理</a></li>
+                    <li><a href="south.html">南部の料理</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" id="search_box" placeholder="料理名を検索.....">
+                <input type="button" value="検索" id="search_btn">
+            </div>
+        </nav>
+        <article>
+            <h3>最新の投稿</h3>
+            <div class="new_list">
+                <!-- phở -->
+                <div class="new_item">
+                    <h4>フォ - 伝統的な料理</h4>
+                    <img src="image/pho1.jpeg" alt="pho1">
+                    <div class="content">
+                        <p>フォーはベトナムの伝統的な料理であり、ベトナム料理の最も典型的な料理の1つと見なすこともできます。フォーの主な材料は、ライスヌードルのスープとスープ（または南部ではスープと呼ばれています）と、薄くスライスした牛肉または鶏肉です。さらに...
+                            <a href="northern.html" style="color: blue;">続き</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- nem rán -->
+                <div class="new_item">
+                    <h4>揚げ春巻き (NEM RAN)</h4>
+                    <img src="image/nemran1.jpg" alt="pho1">
+                    <div class="content">
+                        <p>今日では、シーフード揚げ春巻き、ベジタリアン揚げ春巻き、春巻きなど、おいしい揚げ春巻きを作る方法はたくさんありますが、伝統的な揚げ春巻きは今でも北部の人々に愛され、満月の日。伝統的なテットの休日北の春巻きには野菜や果物が多く,春雨もあり...<a
+                                href="central.html" style="color: blue;">続き</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- bánh mi -->
+                <div class="new_item" id="fix">
+                    <h4>バインミーベトナム</h4>
+                    <img src="image/banhmi.png" alt="pho1">
+                    <div class="content">
+                        <p>バンミは、フォーと並んで、世界中の多くの国から多くのダイナーを征服してきたベトナムの豊かな料理の傑出した代表者の1人です。我慢できない」は、サウスチャイナモーニングポストがベトナムのパンに捧げた最初の言葉です。バンミは、フォーと並んで...
+                            <a href="south.html" style="color: blue;">続き</a>
+                        </p>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </article>
+        <article>
+            <div class="intereste">
+                <h3>気になる投稿</h3>
+
+                <!-- chè -->
+                <div class="care_item">
+                    <h4>フォ - 伝統的な料理</h4>
+                    <img src="image/pho1.jpeg" alt="pho1">
+                    <div class="content">
+                        <p>フォーはベトナムの伝統的な料理であり、ベトナム料理の最も典型的な料理の1つと見なすこともできます。フォーの主な材料は、ライスヌードルのスープとスープ（または南部ではスープと呼ばれています）と、薄くスライスした牛肉または鶏肉です。さらに...
+                            <a href="northern.html" style="color: blue;">続き</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- bún đậu mắm tôm -->
+                <div class="care_item">
+                    <h4>揚げ春巻き (NEM RAN)</h4>
+                    <img src="image/nemran1.jpg" alt="pho1">
+                    <div class="content">
+                        <p>今日では、シーフード揚げ春巻き、ベジタリアン揚げ春巻き、春巻きなど、おいしい揚げ春巻きを作る方法はたくさんありますが、伝統的な揚げ春巻きは今でも北部の人々に愛され、満月の日。伝統的なテットの休日北の春巻きには野菜や果物が多く、春雨もあり...<a
+                                href="central.html" style="color: blue;">続き</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- bánh mì -->
+                <div class="care_item" id="fix">
+                    <h4>バインミーベトナム</h4>
+                    <img src="image/banhmi.png" alt="pho1">
+                    <div class="content">
+                        <p>バンミは、フォーと並んで、世界中の多くの国から多くのダイナーを征服してきたベトナムの豊かな料理の傑出した代表者の1人です。我慢できない」は、サウスチャイナモーニングポストがベトナムのパンに捧げた最初の言葉です。バンミは、フォーと並んで...<a
+                                href="south.html" style="color: blue;">続き</a>
+                        </p>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </article>
+    </div>
+    </div>
+
+</body>
+<footer>
+    <div class="footer_nav">
+        <ul>
+            <li id="footer_home"><a href="index.html">ホームページ</a></li>
+            <li><a href="northern.html">北部の料理</a></li>
+            <li><a href="central.html">中央部の料理</a></li>
+            <li><a href="south.html">南部の料理</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </div>
+    <small>&copy;2021 ベトナム料理.</small>
+</footer>
+
+</html>

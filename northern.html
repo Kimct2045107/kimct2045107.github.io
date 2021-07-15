@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ベトナムの料理</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javaScript/.js"></script>
+    <link rel="shortcut icon" href="logo.ico">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#"><img src="image/logo.png" alt="logo"></a>
+            <!-- thêm js sau -->
+            <div id="slider">
+                <img class="slide" src="image/banhmi.png" style="display: none;" overflow: hidden>
+                <img class="slide" src="image/banhcuon.jpg" style="display: none;" overflow: hidden>
+                <img class="slide" src="image/pho3_slide.jpg" style="display: none;" overflow: hidden>
+                <a href="#" id="next"><img src="image/next.png"></a>
+                <a href="#" id="prev"><img src="image/prev.png"></a>
+            </div>
+            <script>
+                var stt = 0;
+                slide();
+
+                function slide() {
+                    var i;
+                    var x = document.getElementsByClassName("slide");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    stt++;
+                    if (stt > x.length) { stt = 1 }
+                    x[stt - 1].style.display = "block";
+                    setTimeout(slide, 1000);
+                }
+
+            </script>
+        </header>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">ホームページ</a></li>
+                    <li id="current"><a href="northern.html">北部の料理</a></li>
+                    <li><a href="central.html">中央部の料理</a></li>
+                    <li><a href="south.html">南部の料理</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" id="search_box" placeholder="料理名を検索.....">
+                <input type="button" value="検索" id="search_btn">
+            </div>
+        </nav>
+        <div id="breadcrumb">
+            <ol>
+                <li><a href="index.html">HOME</a></li>
+                <li>北部の料理</li>
+            </ol>
+        </div>
+        <article>
+            <div class="panel-body">
+                <h1 class="title" style="color: red;">ハノイ産のフォーを紹介します。</h1>
+                <div class="row margin-bottom-lg">
+                    <!-- <div class="col-md-12">
+                        <span class="h5">ｎｇａｙ　ｔｈａｎｇ　ｎｍ</span>
+                    </div> -->
+                    <div class="clearfix">
+                        <div class="shokai">
+                            <p><strong>ハノイとは</strong>、すべての訪問者を忘れられないものにする何千もの料理を備えた、非常に興味深くユニークな料理文化を指します。そして、ハノイ料理に関して言えば、何千年もの文明のこの街の典型的な美しさであるハノイフォーは言うまでもありません。
+                            </p>
+                        </div>
+                    </div>
+                    <div id="pho_pic">
+                        <img alt="pho2" height="372" src="image/pho1.jpeg" width="651" onclick="pho_click()">
+                    </div>
+                    <p style="text-align: justify;">
+                        <br>
+                        <span style="font-size:18px;">
+                            <span style="font-family:yumincho,Times,serif;">
+                                <strong>ハノイ</strong>
+                                は多くの異なる地域で人口密度の高い場所であるため、この場所は多くの文化的美しさの融合です。ハノイについて言及すると、フォーに言及せざるを得ません。これは、土地の典型的な味わいです。
+                                <br>
+                                <strong>フォー</strong>
+                                は古くから存在する非常に繊細な料理で、料理人の手によってさまざまな味があります。ただし、フォーの主な成分には、フォーヌードル、生姜、シナモン、アニス、カルダモンの香りがするスープと、豚骨の煮物、薄くスライスした牛肉、ハーブと一緒にフォーのボウルに入れた裸の牛肉が含まれます。フォーを食べるときは、唐辛子酢やフレッシュレモンをスープに絞り、マイルドな酸味を出すために、ホットケーキやスパイスと一緒に食べることがよくあります。フォーには、人々を魅了する奇妙な香りがあります。寒い冬の朝、熱いフォーのボウルを楽しんだ後、仕事を続けることほど良いことはありません。フォーはとても食べやすい料理で、年齢を問わず誰でも食べられます。
+                                太ったり病気になったりすることを恐れずに食べることができます。高級レストランや道端のお店などでハノイフォーを楽しむことができます。ビーフフォーの他に、チキンフォーなどとても美味しくて魅力的なフォー料理も楽しめます。<br>
+                                フォーを美味しくする最も重要なことはスープです。スープは砂糖やMSGからの甘さではなく、骨からの甘さを持っている必要があります。スープは色がはっきりしていて、香りが薄いはずです。おいしいスープを手に入れるには、料理人も非常に注意深く細心の注意を払う必要があります。スープを調理する秘訣は、一人一人の料理の経験に依存します。
+                            </span>
+                        </span>
+                        <br>
+                    </p>
+                    <div id="pho_pic2">
+                        <img alt="anh pho2" height="373" src="image/pho2.jpeg" width="651">
+                    </div>
+                    <p style="text-align: justify;">
+                        <br><span style="font-size:18px;"><span
+                                style="font-family:yumincho,Times,serif;">フォーを使った料理はたくさん楽しめます。ヌードルスープ、フォーの炒め物、揚げヌードルスープなどですが、常にヌードルスープが最も魅力的な料理です。ベトナム人や外国人観光客にとって、フォーは繊細な料理と見なされています。フォーハノイは、その料理と美的品質を十分に評価するために、磁器のボウルに保管する必要があります。フォーのボウルは、スパイスと美しい色がたくさん付いているのでとても魅力的です。スープの香りを嗅ぐだけで、恍惚とした気分になります。肉、骨、ハーブの風味が混ざり合い、人々の心に響く特別な香りを生み出します。フォーを食べるときは、ゆっくり食べてその美味しさを感じてください。肉は柔らかく、ケーキはしなやかで、生姜のマイルドな辛さ、唐辛子の辛味、ハーブのほのかな香り、ねぎの強い香りが見られることもあります。すべてが甘いシーンに溶け込み、フォーの典型的なおいしい味を作り出します。<br>
+                                フォーはデリケートな料理で、ハタンの味の特徴になります。どこへ行っても、何をしても、ハノイの人々はいつもハノイに戻って身近な料理を楽しむことを楽しみにしています。ハノイのヌードルスープは、タックラム、グエントゥアンなどの作家の心をかき立て、文化的な美しさとして徐々に歴史に名を残してきました。
+                                ハノイフォーを楽しむ洗練された素晴らしい気分を完全に説明できる言葉はありません。それは他のものと混同されない特別な贈り物であることを知っておいてください。生活はより現代的で、人々は常に国や世界の料理文化に適したおいしい料理を作るために創造的ですが、ハノイフォーは常に食べ物を楽しみたい人にとって信頼できる選択肢です。ハノイの住民や観光客が到着するときハノイで。
+                            </span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+        </article>
+
+    </div>
+</body>
+<footer>
+    <div class="footer_nav">
+        <ul>
+            <li id="footer_home"><a href="index.html">ホームページ</a></li>
+            <li><a href="northern.html">北部の料理</a></li>
+            <li><a href="central.html">中央部の料理</a></li>
+            <li><a href="south.html">南部の料理</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </div>
+    <small>&copy;2021 ベトナム料理.</small>
+</footer>
+
+</html>

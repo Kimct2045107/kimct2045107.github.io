@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ベトナムの料理</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javaScript/.js"></script>
+    <link rel="shortcut icon" href="logo.ico">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#"><img src="image/logo.png" alt="logo"></a>
+            <!-- thêm js sau -->
+            <div id="slider">
+                <img class="slide" src="image/banhmi.png" style="display: none;" overflow: hidden>
+                <img class="slide" src="image/banhcuon.jpg" style="display: none;" overflow: hidden>
+                <img class="slide" src="image/pho3_slide.jpg" style="display: none;" overflow: hidden>
+                <a href="#" id="next"><img src="image/next.png"></a>
+                <a href="#" id="prev"><img src="image/prev.png"></a>
+            </div>
+            <script>
+                var stt = 0;
+                slide();
+
+                function slide() {
+                    var i;
+                    var x = document.getElementsByClassName("slide");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    stt++;
+                    if (stt > x.length) { stt = 1 }
+                    x[stt - 1].style.display = "block";
+                    setTimeout(slide, 1000);
+                }
+
+            </script>
+        </header>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li id="#"><a href="index.html">ホームページ</a></li>
+                    <li id="#"><a href="northern.html">北部の料理</a></li>
+                    <li id="current"><a href="central.html">中央部の料理</a></li>
+                    <li id="#"><a href="south.html">南部の料理</a></li>
+                    <li id="#"><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" id="search_box" placeholder="料理名を検索.....">
+                <input type="button" value="検索" id="search_btn">
+            </div>
+        </nav>
+        <div id="breadcrumb">
+            <ol>
+                <li><a href="index.html">HOME</a></li>
+                <li>中央部の料理</li>
+            </ol>
+        </div>
+        <article>
+            <div class="panel-body">
+                <h1 class="title" style="color: red;">揚げ春巻き (NEM RAN)を紹介します。</h1>
+                <div class="row margin-bottom-lg">
+                    <!-- <div class="col-md-12">
+                        <span class="h5">ｎｇａｙ　ｔｈａｎｇ　ｎｍ</span>
+                    </div> -->
+                    <div class="clearfix">
+                        <div class="shokai">
+                            <p>今日では、シーフード揚げ春巻き、ベジタリアン揚げ春巻き、春巻きなど、おいしい揚げ春巻きを作る方法はたくさんありますが、伝統的な揚げ春巻きは今でも北部の人々に愛され、満月の日。伝統的なテットの休日。</p>
+                        </div>
+                    </div>
+                    <div id="pho_pic">
+                        <img alt="pho2" height="372" src="image/nemran1.jpg" width="651" onclick="pho_click()">
+                    </div>
+                    <p style="text-align: justify;">
+                        <br>
+                        <span style="font-size:18px;">
+                            <span style="font-family:yumincho,Times,serif;">
+                                北の春巻きには野菜や果物が多く、椎茸、キクラゲ、春雨もあります。特に北部の春巻きは、薄い粘り気のあるライスペーパーロールで包み、揚げるまで何層にも巻いてサクサクしていますが、かみ傷はやわらかいです。
+                                <br>
+                                赤身の豚肩肉を洗ったり、ひき肉にしたり、ひき肉にしたりします。キクラゲは柔らかくなるまで水に浸し、洗ってスライスし、みじん切りにします。春雨はまた、冷水に短時間浸して柔らかくし、水気を切り、はさみで1.5〜2cmの小片に切ります。にんじんは皮をむき、洗い、薄くスライスし、スライスします。もやしを洗い、取り出して乾かし、手でつぶして水分を減らし、巻き付け時に春巻きが水から出ないようにします。ネギは根を切り、洗い、みじん切りにします。春巻きが美味しくてつぶれないようにするには、材料を切り刻みすぎないようにし、材料の長さを変えてください。
+                            </span>
+                        </span>
+                        <br>
+                    </p>
+                    <div id="pho_pic2">
+                        <img alt="anh pho2" height="373" src="image/nemran2.jpg" width="651">
+                    </div>
+                    <p style="text-align: justify;">
+                        <br><span style="font-size:18px;"><span
+                                style="font-family:yumincho,Times,serif;">上記の材料をすべて大きなボウルに入れ、少量の調味料とよく混ぜ、コショウで味を調え、約5分間放置してスパイスを注入し、卵を加えてよく混ぜます。ライスペーパーロールが乾燥している場合は、酢を混ぜた水をケーキに塗ることができます。この酢の混合物は、ライスペーパーを柔らかくし、揚げたときに春巻きをよりカリカリにする効果があります。きれいなまな板の上にライスペーパーロールを置き、大さじ1〜1.5杯の混合物をすくい取り、春巻きの形に人工的に広げ、ライスペーパーロールを引っ張って円を描き始め、手を締めます。指を使って春巻きの両端をバランスよく調整してから、春巻きの両端を折り曲げてもう一度巻きます。材料がなくなるまでこれを行います。<br>
+                                すべての春巻きを巻いた後、鍋に油を入れ、油に浸す必要はありませんが、春巻きの少なくとも半分を入れ、調理油を加熱してから、フライパンに春巻きを落とす必要があります。各春巻きを鍋に入れ、箸で春巻きを鍋の周りに転がして、春巻きの形を整え、形を保ち、所定の位置に置きます。春巻きを鍋に入れて金色になるまでそのままにして、反対側をひっくり返して揚げると、春巻きは平らで見苦しいものになります。
+
+                                テットトレイで春巻きを食べる場合は、甘酸っぱいソースを入れて生野菜と一緒に食べる必要があります。特に春巻きはインスタントラーメンに点在するだけなので、ライスペーパーロールのサクサク感を保つために、たくさん食べる人はそれを手に取ってください。
+
+                                今日、文化的な干渉により、各地域のTetトレイには、家族の好みに応じて、他の地域の料理があります。そのため、テト料理はますます豊かで、多様で、美味しくなりつつあります。お正月はとても暖かい時期で、人々が一堂に会してお正月を振り返り、お正月について話し合います。したがって、地域や国に関係なく、すべてのベトナム人の潜在意識の奥深くで、テトミールトレイは常に友情と関連付けられており、すべてのベトナム人家族に常に神聖な意味を持っています。
+                            </span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+        </article>
+    </div>
+</body>
+<footer>
+    <div class="footer_nav">
+        <ul>
+            <li id="footer_home"><a href="index.html">ホームページ</a></li>
+            <li><a href="northern.html">北部の料理</a></li>
+            <li><a href="central.html">中央部の料理</a></li>
+            <li><a href="south.html">南部の料理</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </div>
+    <small>&copy;2021 ベトナム料理.</small>
+</footer>
+
+</html>

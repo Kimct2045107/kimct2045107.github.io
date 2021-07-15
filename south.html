@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ベトナムの料理</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javaScript/.js"></script>
+    <link rel="shortcut icon" href="logo.ico">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#"><img src="image/logo.png" alt="logo"></a>
+            <!-- thêm js sau -->
+            <div id="slider">
+                <img class="slide" src="image/banhmi.png" style="display: none;" overflow: hidden>
+                <img class="slide" src="image/banhcuon.jpg" style="display: none;" overflow: hidden>
+                <img class="slide" src="image/pho3_slide.jpg" style="display: none;" overflow: hidden>
+                <a href="#" id="next"><img src="image/next.png"></a>
+                <a href="#" id="prev"><img src="image/prev.png"></a>
+            </div>
+            <script>
+                var stt = 0;
+                slide();
+
+                function slide() {
+                    var i;
+                    var x = document.getElementsByClassName("slide");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    stt++;
+                    if (stt > x.length) { stt = 1 }
+                    x[stt - 1].style.display = "block";
+                    setTimeout(slide, 1000);
+                }
+
+            </script>
+        </header>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">ホームページ</a></li>
+                    <li><a href="northern.html">北部の料理</a></li>
+                    <li><a href="central.html">中央部の料理</a></li>
+                    <li id="current"><a href="south.html">南部の料理</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" id="search_box" placeholder="料理名を検索.....">
+                <input type="button" value="検索" id="search_btn">
+            </div>
+        </nav>
+        <div id="breadcrumb">
+            <ol>
+                <li><a href="index.html">HOME</a></li>
+                <li>南部の料理</li>
+            </ol>
+        </div>
+        <article>
+            <div class="panel-body">
+                <h1 class="title" style="color: red;">バインミーベトナムを紹介します。</h1>
+                <div class="row margin-bottom-lg">
+                    <!-- <div class="col-md-12">
+                        <span class="h5">ｎｇａｙ　ｔｈａｎｇ　ｎｍ</span>
+                    </div> -->
+                    <div class="clearfix">
+                        <div class="shokai">
+                            <p>バンミは、フォーと並んで、世界中の多くの国から多くのダイナーを征服してきたベトナムの豊かな料理の傑出した代表者の1人です。</p>
+                        </div>
+                    </div>
+                    <div id="pho_pic">
+                        <img alt="pho2" height="372" src="image/banhmi1.jpg" width="651" onclick="pho_click()">
+                    </div>
+                    <p style="text-align: justify;">
+                        <br>
+                        <span style="font-size:18px;">
+                            <span style="font-family:yumincho,Times,serif;">
+                                「我慢できない」は、サウスチャイナモーニングポストがベトナムのパンに捧げた最初の言葉です。バンミは、フォーと並んで、世界中の多くの国から多くのダイナーを征服してきたベトナムの豊かな料理の傑出した代表者の1人です。
+                                香港（中国）のにぎやかな湾仔市街地にある、サイゴン風の古いバインミーレストランでのヘッドシェフTheign YiePhanの気持ちから始まります。
+                                <br>
+                                ベトナムのパンは、「プレミアムスナック、いつも食べて飽きない」という精神で、一言一句カラフルで風味豊かに見えます。著者のペンの下で、ベトナムのサンドイッチは魅力的なカラフルなキュビズムの絵として表示されます。つまり、クラストは黄色のフランスのパンで、内側は香りのよい肉の各層の黄金色、ハーブの若い緑色、トマトのストランドと混合されたキュウリのいくつかのスライスの白い点、ニンジンの調和です。見た目が美しいだけでなく、ベトナムのサンドイッチの味は、食事をする人にとって印象的な魅力です。
+                            </span>
+                        </span>
+                        <br>
+                    </p>
+                    <div id="pho_pic2">
+                        <img alt="anh pho2" height="373" src="image/banhmi2.jpg" width="651">
+                    </div>
+                    <p style="text-align: justify;">
+                        <br><span style="font-size:18px;"><span style="font-family:yumincho,Times,serif;">
+                                それは、外側のサクサクした皮、内側の肉の豊かさ、そして新鮮なまたはミックスサラダスタイルの野菜の独特の酸味です。記事には、パンはシェフのお気に入りであるだけでなく、古いサイゴンの小さな通りでの謙虚な始まりから世界に成長した料理であるという段落があります。現代のベトナムの歴史を伝える別の方法として知られ、愛されています。<br>
+
+                                ベトナム料理への憧れと好奇心を持ちながら、ベトナムの味とフランスの皮とサンドイッチのプレゼンテーションが絡み合った興味深い組み合わせで、記事の著者はベトナム料理の歴史を探求しました。このケーキは、有名な人から提供されたドキュメンタリー情報から生まれました。ホーチミン市のレストランオーナー。それ以来、この記事は、130年以上前のフランス植民地時代のベトナム人シェフの創造性を反映しています。
+                                フランス人のために料理をするベトナム人シェフは、パンの作り方を学び、ベトナム人の好みに合わせてレシピを「減らし」、元のフランスのレシピに代わる料理を作る方法を学びました。人々の好みと「財布」に合わせて。前世紀の50年代までに、ベトナム版のサンドイッチが一般の人々に提供されるようになりました。
+
+                                サイゴンから、サンドイッチは3つの地域すべての人々によって処理および調整され、各地域により適しています。ベトナムのパンは、小さな通りを織り成す謙虚な露天商から始まり、オーストラリアや米国など、世界中にベトナム人がいる国へと徐々に道を見つけていきました。
+
+
+                            </span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+    </div>
+</body>
+<footer>
+    <div class="footer_nav">
+        <ul>
+            <li id="footer_home"><a href="index.html">ホームページ</a></li>
+            <li><a href="northern.html">北部の料理</a></li>
+            <li><a href="central.html">中央部の料理</a></li>
+            <li><a href="south.html">南部の料理</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </div>
+    <small>&copy;2021 ベトナム料理.</small>
+</footer>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ベトナムの料理</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javaScript/.js"></script>
+    <link rel="shortcut icon" href="logo.ico">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#"><img src="image/logo.png" alt="logo"></a>
+            <!-- thêm js sau -->
+            <div id="slider">
+                <img class="slide" src="image/banhmi.png" style="display: none;" overflow: hidden>
+                <img class="slide" src="image/banhcuon.jpg" style="display: none;" overflow: hidden>
+                <img class="slide" src="image/pho3_slide.jpg" style="display: none;" overflow: hidden>
+                <a href="#" id="next"><img src="image/next.png"></a>
+                <a href="#" id="prev"><img src="image/prev.png"></a>
+            </div>
+            <script>
+                var stt = 0;
+                slide();
+
+                function slide() {
+                    var i;
+                    var x = document.getElementsByClassName("slide");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    stt++;
+                    if (stt > x.length) { stt = 1 }
+                    x[stt - 1].style.display = "block";
+                    setTimeout(slide, 1000);
+                }
+
+            </script>
+        </header>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">ホームページ</a></li>
+                    <li><a href="northern.html">北部の料理</a></li>
+                    <li><a href="central.html">中央部の料理</a></li>
+                    <li><a href="south.html">南部の料理</a></li>
+                    <li id="current"><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" id="search_box" placeholder="料理名を検索.....">
+                <input type="button" value="検索" id="search_btn">
+            </div>
+        </nav>
+        <div id="breadcrumb">
+            <ol>
+                <li><a href="index.html">HOME</a></li>
+                <li>お問い合わせ</li>
+            </ol>
+        </div>
+        <article>
+            <h1>お問い合わせ</h1>
+            <p class="lead">お気軽にお問い合わせください</p>
+            <p>下記メールフォームをご記入いただき、「送信する」ボタンを押してください。</p>
+            <p>「<span class="must">※</span>」は必須項目です。</p>
+            <section>
+                <h2>お問い合わせフォーム</h2>
+                <form id="entry">
+                    <dl>
+                        <dt>お名前 <span class="must">※</span></dt>
+                        <dd><input type="text" name="name" id="name" required></dd>
+                        <dt>メールアドレス <span class="must">※</span></dt>
+                        <dd><input type="email" name="email" id="email" required></dd>
+                        <dt>興味のある地域の食べ物</dt>
+                        <dd>
+                            <select name="interest" id="interest">
+                                <option value="北部の料理">北部の料理</option>
+                                <option value="中央部の料理">中央部の料理</option>
+                                <option value="南部の料理">南部の料理</option>
+                            </select>
+                        </dd>
+                        <dt>お問い合わせ種別</dt>
+                        <dd>
+                            <label><input type="checkbox" name="category" id="category1" value="作り方">作り方</label>
+                            <label><input type="checkbox" name="category" id="category2" value="材料購入したい">材料購入したい</label>
+                            <label><input type="checkbox" name="category" id="category3"
+                                    value="その他問い合わせ">その他問い合わせ</label>
+                        </dd>
+                        <dt>サイトを知ったきっかけ</dt>
+                        <dd>
+                            <label><input type="radio" name="questionnaire" id="questionnaire1" value="SNS">SNS</label>
+                            <label><input type="radio" name="questionnaire" id="questionnaire2"
+                                    value="検索エンジンから">検索エンジンから</label>
+                            <label><input type="radio" name="questionnaire" id="questionnaire3" value="その他">その他</label>
+                        </dd>
+                        <dt>お問い合わせ内容</dt>
+                        <dd>
+                            <textarea name="detail" id="detail"></textarea>
+                        </dd>
+                    </dl>
+                    <p id="submit_button_cover">
+                        <input type="submit" id="submit_button" value="送信する">
+                        <input type="reset" id="clear_button" value="クリア">
+                    </p>
+                </form>
+            </section>
+        </article>
+    </div>
+</body>
+<footer>
+    <div class="footer_nav">
+        <ul>
+            <li id="footer_home"><a href="index.html">ホームページ</a></li>
+            <li><a href="northern.html">北部の料理</a></li>
+            <li><a href="central.html">中央部の料理</a></li>
+            <li><a href="south.html">南部の料理</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </div>
+    <small>&copy;2021 ベトナム料理.</small>
+</footer>
+
+</html>
